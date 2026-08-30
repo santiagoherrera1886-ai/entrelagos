@@ -116,6 +116,49 @@ section{padding:clamp(84px,11vw,140px) 0;position:relative}
 .plat .role{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;padding:6px 10px;border-radius:5px;display:inline-block;background:rgba(235,235,172,.06);border:1px solid var(--line)}
 .plat .role.hot{background:var(--gold);color:var(--forest);border-color:var(--gold);font-weight:700}
 
+
+
+/* performance pauta */
+.perf-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:34px}
+.perf-update{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-lt);padding:8px 12px;border-radius:999px;border:1px solid rgba(111,148,80,.45);background:rgba(111,148,80,.09);white-space:nowrap}
+.perf-update::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green-lt);margin-right:8px;box-shadow:0 0 0 4px rgba(111,148,80,.12)}
+.perf-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+.perf-kpi{position:relative;overflow:hidden;background:var(--forest);border:1px solid var(--line);border-radius:11px;padding:22px 20px;min-height:142px;transition:.3s}
+.perf-kpi:hover{transform:translateY(-3px);border-color:var(--green-lt)}
+.perf-kpi.hot{border-color:rgba(201,179,78,.55);background:linear-gradient(145deg,rgba(201,179,78,.09),var(--forest) 58%)}
+.perf-kpi::after{content:"";position:absolute;right:-28px;bottom:-42px;width:110px;height:110px;border-radius:50%;background:rgba(235,235,172,.025)}
+.perf-kpi .k-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(235,235,172,.52);margin-bottom:16px}
+.perf-kpi strong{display:block;font-family:var(--display);font-size:clamp(1.8rem,3.3vw,2.55rem);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--cream)}
+.perf-kpi.hot strong{color:var(--gold)}
+.perf-kpi small{display:block;margin-top:10px;font-size:12px;color:rgba(235,235,172,.5)}
+.perf-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}
+.perf-card{background:var(--forest);border:1px solid var(--line-solid);border-radius:11px;padding:clamp(22px,3vw,32px)}
+.perf-card-title{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px}
+.perf-card-title .mini{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.perf-card-title h3{font-family:var(--display);font-size:1.25rem;line-height:1.15;letter-spacing:-.01em}
+.perf-pct{font-family:var(--display);font-size:2rem;font-weight:800;color:var(--gold);line-height:1}
+.budget-track{height:13px;border-radius:99px;background:rgba(235,235,172,.07);overflow:hidden;border:1px solid var(--line);margin-bottom:14px}
+.budget-fill{height:100%;width:0;background:linear-gradient(90deg,var(--green-lt),var(--gold));border-radius:99px;transition:width 1.35s cubic-bezier(.2,.7,.2,1)}
+.budget-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px;color:rgba(235,235,172,.58)}
+.budget-row b{color:var(--cream);font-family:var(--mono);font-size:12px}
+.perf-mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}
+.perf-mini{border-top:1px solid var(--line);padding-top:13px}
+.perf-mini span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(235,235,172,.42);margin-bottom:5px}
+.perf-mini strong{font-family:var(--display);font-size:1.15rem}
+.proj-wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;margin-top:4px}
+.proj-box{padding:21px 16px;border-radius:9px;border:1px solid var(--line);background:rgba(235,235,172,.025);text-align:center}
+.proj-box.future{border-color:rgba(201,179,78,.45);background:rgba(201,179,78,.07)}
+.proj-box strong{display:block;font-family:var(--display);font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1;color:var(--cream)}
+.proj-box.future strong{color:var(--gold)}
+.proj-box span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(235,235,172,.46);margin-top:8px}
+.proj-arrow{font-family:var(--mono);font-size:22px;color:var(--green-lt)}
+.proj-note{font-size:12px;line-height:1.5;color:rgba(235,235,172,.48);margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.perf-detail{margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.perf-detail-item{padding:14px 15px;border:1px solid var(--line);border-radius:8px;background:rgba(235,235,172,.02);min-width:0}
+.perf-detail-item span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.perf-detail-item strong{display:block;font-size:13px;font-weight:600;overflow-wrap:anywhere;color:rgba(235,235,172,.88)}
+.perf-source{margin-top:16px;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:rgba(235,235,172,.34)}
+
 /* cronograma */
 .tl{position:relative;margin-top:20px;padding-left:34px}
 .tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--green-lt),transparent)}
@@ -254,9 +297,17 @@ footer{border-top:1px solid var(--line);padding:40px 0}
   .burger{display:block}
   .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(28,40,24,.97);padding:20px 28px;gap:18px;border-bottom:1px solid var(--line)}
   .perfil,.pieces,.kw-extra{grid-template-columns:1fr}
+  .perf-kpis{grid-template-columns:repeat(2,1fr)}
+  .perf-layout{grid-template-columns:1fr}
   .pot-row{grid-template-columns:1fr}
   .coords{display:none}
   .obj .caption{margin-top:0}
+}
+@media(max-width:560px){
+  .perf-kpis{grid-template-columns:1fr}
+  .perf-detail{grid-template-columns:1fr}
+  .proj-wrap{grid-template-columns:1fr}
+  .proj-arrow{transform:rotate(90deg);justify-self:center}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
@@ -272,6 +323,7 @@ footer{border-top:1px solid var(--line);padding:40px 0}
   <div class="nav-links" id="navlinks">
     <a href="#piezas">Piezas</a>
     <a href="#plataformas">Plataformas</a>
+    <a href="#pauta">Pauta</a>
     <a href="#cronograma">Cronograma</a>
     <a href="#ubicacion">Ubicación</a>
     <a href="#google">Google Ads</a>
@@ -354,6 +406,63 @@ footer{border-top:1px solid var(--line);padding:40px 0}
     <h2 class="section-title reveal" data-delay="1">Plataformas del plan.</h2>
     <p class="lead reveal" data-delay="2">Meta lidera la captación de leads; Google Ads suma la intención de búsqueda; YouTube y TikTok refuerzan alcance y validación con video.</p>
     <div class="plat-grid" id="platgrid"></div>
+  </div>
+</section>
+
+
+<!-- PERFORMANCE PAUTA -->
+<section id="pauta">
+  <div class="wrap">
+    <div class="perf-head">
+      <div>
+        <div class="eyebrow reveal">Meta Ads · Resultados reales</div>
+        <h2 class="section-title reveal" data-delay="1">La pauta ya está moviendo conversaciones.</h2>
+        <p class="lead reveal" data-delay="2">Primer corte de rendimiento de la campaña activa para Medellín. Los indicadores muestran inversión, conversaciones iniciadas, eficiencia y alcance del periodo.</p>
+      </div>
+      <div class="perf-update reveal" data-delay="2" id="perfUpdated">Actualizado al 30 AGO 2026</div>
+    </div>
+
+    <div class="perf-kpis" id="perfKpis"></div>
+
+    <div class="perf-layout">
+      <div class="perf-card reveal" data-delay="1">
+        <div class="perf-card-title">
+          <div><div class="mini">Ejecución de presupuesto</div><h3>Inversión utilizada</h3></div>
+          <div class="perf-pct" id="budgetPct">0%</div>
+        </div>
+        <div class="budget-track"><div class="budget-fill" id="budgetFill"></div></div>
+        <div class="budget-row">
+          <span>Consumido <b id="budgetSpent">$0</b></span>
+          <span>Presupuesto <b id="budgetTotal">$0</b></span>
+          <span>Saldo <b id="budgetRemaining">$0</b></span>
+        </div>
+        <div class="perf-mini-grid">
+          <div class="perf-mini"><span>Impresiones</span><strong id="perfImpressions">0</strong></div>
+          <div class="perf-mini"><span>Alcance</span><strong id="perfReach">0</strong></div>
+          <div class="perf-mini"><span>Frecuencia</span><strong id="perfFrequency">0</strong></div>
+          <div class="perf-mini"><span>CPM calculado</span><strong id="perfCpm">$0</strong></div>
+        </div>
+      </div>
+
+      <div class="perf-card reveal" data-delay="2">
+        <div class="perf-card-title">
+          <div><div class="mini">Escenario al CPL actual</div><h3>Proyección de conversaciones</h3></div>
+        </div>
+        <div class="proj-wrap">
+          <div class="proj-box"><strong id="projCurrent">0</strong><span>Actuales</span></div>
+          <div class="proj-arrow">→</div>
+          <div class="proj-box future"><strong id="projFull">0</strong><span>Con presupuesto completo</span></div>
+        </div>
+        <p class="proj-note">Proyección matemática si el costo por conversación actual se mantuviera estable. No representa una garantía de resultados futuros.</p>
+        <div class="perf-detail">
+          <div class="perf-detail-item"><span>Campaña</span><strong id="perfCampaign">—</strong></div>
+          <div class="perf-detail-item"><span>Conjunto</span><strong id="perfAdset">—</strong></div>
+          <div class="perf-detail-item"><span>Objetivo</span><strong>Conversaciones iniciadas</strong></div>
+          <div class="perf-detail-item"><span>Inicio conjunto</span><strong id="perfStart">—</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="perf-source reveal">// Fuente: exportación Meta Ads · corte 1–30 agosto 2026 · atribución 7 días clic / 1 día visualización.</div>
   </div>
 </section>
 
@@ -575,6 +684,20 @@ const COMP=[
   {loc:"El Tres · Tierra prometida",name:"Tierra prometida",m2:"500–1.300 m²",price:"$260.000/m²",admin:"+ Admin",badge:"16 meses · 88% · 71 lotes"},
 ];
 
+
+const PAID_MEDIA={
+  updated:"30 AGO 2026",
+  campaign:"MEDELLÍN NUEVA_CLIENTES_CPL_EXPO",
+  adset:"GEO_MEDELLIN_2026",
+  start:"27 AGO 2026",
+  results:22,
+  costPerResult:4940.09090909,
+  budget:200000,
+  spent:108682,
+  impressions:8858,
+  reach:5580
+};
+
 /* ---------- RENDER ---------- */
 document.getElementById('platgrid').innerHTML=PLATFORMS.map(p=>`
   <div class="plat reveal">
@@ -612,6 +735,42 @@ document.getElementById('compgrid').innerHTML=COMP.map(c=>`
     <div class="comp-metric"><span>Valorización</span><span>20–30% / 5a</span></div>
     <div class="comp-metric"><span>Admin</span><span>Sin costo</span></div>
     <div class="comp-badge">Mejor relación m² / $</div></div>`;
+
+
+/* ---------- PERFORMANCE PAUTA ---------- */
+const money=v=>'$'+Math.round(v).toLocaleString('es-CO');
+const number=v=>Math.round(v).toLocaleString('es-CO');
+const decimals=(v,d=2)=>Number(v).toLocaleString('es-CO',{minimumFractionDigits:d,maximumFractionDigits:d});
+const budgetPct=Math.min((PAID_MEDIA.spent/PAID_MEDIA.budget)*100,100);
+const remaining=Math.max(PAID_MEDIA.budget-PAID_MEDIA.spent,0);
+const frequency=PAID_MEDIA.impressions/PAID_MEDIA.reach;
+const cpm=(PAID_MEDIA.spent/PAID_MEDIA.impressions)*1000;
+const projected=Math.round(PAID_MEDIA.budget/PAID_MEDIA.costPerResult);
+const PERF_KPIS=[
+  {label:'Inversión',value:money(PAID_MEDIA.spent),note:'Meta Ads · periodo actual'},
+  {label:'Conversaciones',value:number(PAID_MEDIA.results),note:'Mensajes iniciados',hot:true},
+  {label:'Costo por resultado',value:money(PAID_MEDIA.costPerResult),note:'Por conversación iniciada',hot:true},
+  {label:'Personas alcanzadas',value:number(PAID_MEDIA.reach),note:'Alcance único estimado'}
+];
+document.getElementById('perfKpis').innerHTML=PERF_KPIS.map(k=>`
+  <div class="perf-kpi reveal ${k.hot?'hot':''}">
+    <div class="k-label">${k.label}</div><strong>${k.value}</strong><small>${k.note}</small>
+  </div>`).join('');
+document.getElementById('perfUpdated').textContent='Actualizado al '+PAID_MEDIA.updated;
+document.getElementById('budgetPct').textContent=decimals(budgetPct,1)+'%';
+document.getElementById('budgetSpent').textContent=money(PAID_MEDIA.spent);
+document.getElementById('budgetTotal').textContent=money(PAID_MEDIA.budget);
+document.getElementById('budgetRemaining').textContent=money(remaining);
+document.getElementById('perfImpressions').textContent=number(PAID_MEDIA.impressions);
+document.getElementById('perfReach').textContent=number(PAID_MEDIA.reach);
+document.getElementById('perfFrequency').textContent=decimals(frequency,2);
+document.getElementById('perfCpm').textContent=money(cpm);
+document.getElementById('projCurrent').textContent=number(PAID_MEDIA.results);
+document.getElementById('projFull').textContent='≈'+number(projected);
+document.getElementById('perfCampaign').textContent=PAID_MEDIA.campaign;
+document.getElementById('perfAdset').textContent=PAID_MEDIA.adset;
+document.getElementById('perfStart').textContent=PAID_MEDIA.start;
+setTimeout(()=>{const fill=document.getElementById('budgetFill');if(fill)fill.style.width=budgetPct+'%';},180);
 
 /* ---------- MAP ---------- */
 function initMap(){
