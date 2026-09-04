@@ -415,13 +415,14 @@ footer{border-top:1px solid var(--line);padding:40px 0}
   <div class="wrap">
     <div class="perf-head">
       <div>
-        <div class="eyebrow reveal">Meta Ads · Resultados reales</div>
+        <div class="eyebrow reveal">Meta + Google Ads · Resultados reales</div>
         <h2 class="section-title reveal" data-delay="1">La pauta ya está moviendo conversaciones.</h2>
-        <p class="lead reveal" data-delay="2">Primer corte de rendimiento de la campaña activa para Medellín. Los indicadores muestran inversión, conversaciones iniciadas, eficiencia y alcance del periodo.</p>
+        <p class="lead reveal" data-delay="2">Corte actual de septiembre para las campañas activas de Entrelagos. Aquí quedan integrados los resultados de Meta Ads y Google Ads, incluyendo las conversiones de Google verificadas directamente en CRM.</p>
       </div>
-      <div class="perf-update reveal" data-delay="2" id="perfUpdated">Actualizado al 30 AGO 2026</div>
+      <div class="perf-update reveal" data-delay="2" id="perfUpdated">Actualizado al 04 SEP 2026</div>
     </div>
 
+    <div class="eyebrow reveal" style="margin-top:8px">Meta Ads · Septiembre</div>
     <div class="perf-kpis" id="perfKpis"></div>
 
     <div class="perf-layout">
@@ -456,15 +457,54 @@ footer{border-top:1px solid var(--line);padding:40px 0}
         <p class="proj-note">Proyección matemática si el costo por conversación actual se mantuviera estable. No representa una garantía de resultados futuros.</p>
         <div class="perf-detail">
           <div class="perf-detail-item"><span>Campaña</span><strong id="perfCampaign">—</strong></div>
-          <div class="perf-detail-item"><span>Conjunto</span><strong id="perfAdset">—</strong></div>
+          <div class="perf-detail-item"><span>Contactos de mensajes</span><strong id="perfMessageContacts">0</strong></div>
+          <div class="perf-detail-item"><span>Nuevos contactos</span><strong id="perfNewContacts">0</strong></div>
           <div class="perf-detail-item"><span>Objetivo</span><strong>Conversaciones iniciadas</strong></div>
-          <div class="perf-detail-item"><span>Inicio conjunto</span><strong id="perfStart">—</strong></div>
         </div>
       </div>
     </div>
-    <div class="perf-source reveal">// Fuente: exportación Meta Ads · corte 1–30 agosto 2026 · atribución 7 días clic / 1 día visualización.</div>
+    <div class="perf-source reveal">// Fuente Meta Ads · capturas de campaña · septiembre 2026.</div>
+
+    <div class="eyebrow reveal" style="margin-top:58px">Google Ads · Septiembre</div>
+    <div class="perf-kpis" id="googlePerfKpis"></div>
+
+    <div class="perf-layout">
+      <div class="perf-card reveal" data-delay="1">
+        <div class="perf-card-title">
+          <div><div class="mini">Tráfico de búsqueda</div><h3>Rendimiento de campaña</h3></div>
+        </div>
+        <div class="perf-mini-grid" style="margin-top:0">
+          <div class="perf-mini"><span>Impresiones</span><strong id="googleImpressions">0</strong></div>
+          <div class="perf-mini"><span>Clics</span><strong id="googleClicks">0</strong></div>
+          <div class="perf-mini"><span>CTR</span><strong id="googleCtr">0%</strong></div>
+          <div class="perf-mini"><span>CPC medio</span><strong id="googleAvgCpc">$0</strong></div>
+        </div>
+        <div class="perf-detail" style="margin-top:24px">
+          <div class="perf-detail-item"><span>Campaña</span><strong id="googleCampaign">—</strong></div>
+          <div class="perf-detail-item"><span>Coste</span><strong id="googleSpent">$0</strong></div>
+        </div>
+      </div>
+
+      <div class="perf-card reveal" data-delay="2">
+        <div class="perf-card-title">
+          <div><div class="mini">Conversiones verificadas</div><h3>Google Ads vs. CRM</h3></div>
+        </div>
+        <div class="proj-wrap">
+          <div class="proj-box"><strong id="googlePlatformConversions">0</strong><span>Registradas en Google Ads</span></div>
+          <div class="proj-arrow">→</div>
+          <div class="proj-box future"><strong id="googleCrmConversions">0</strong><span>Confirmadas en CRM</span></div>
+        </div>
+        <p class="proj-note">El CRM confirma las conversiones reales. Google Ads todavía no las está atribuyendo correctamente porque la cuenta muestra una alerta de configuración de la etiqueta.</p>
+        <div class="perf-detail">
+          <div class="perf-detail-item"><span>CPL real CRM</span><strong id="googleCrmCpl">$0</strong></div>
+          <div class="perf-detail-item"><span>Estado tracking</span><strong id="googleTrackingStatus">—</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="perf-source reveal">// Fuente Google Ads + validación CRM · corte septiembre 2026. Conversiones reales confirmadas en CRM: 4.</div>
   </div>
 </section>
+
 
 <!-- CRONOGRAMA -->
 <section id="cronograma">
@@ -686,16 +726,29 @@ const COMP=[
 
 
 const PAID_MEDIA={
-  updated:"30 AGO 2026",
-  campaign:"MEDELLÍN NUEVA_CLIENTES_CPL_EXPO",
-  adset:"GEO_MEDELLIN_2026",
-  start:"27 AGO 2026",
-  results:22,
-  costPerResult:4940.09090909,
-  budget:200000,
-  spent:108682,
-  impressions:8858,
-  reach:5580
+  updated:"04 SEP 2026",
+  campaign:"ENTRELAGOS_FASE1_PARCELACIÓN_2026_SEP",
+  results:32,
+  messageContacts:35,
+  newContacts:32,
+  costPerResult:3206,
+  budget:1000000,
+  spent:102592,
+  impressions:12983,
+  reach:7718
+};
+
+const GOOGLE_MEDIA={
+  updated:"04 SEP 2026",
+  campaign:"LOTES_URABA_CAMPAÑA_MARCA_2026_KW_SEARCH_PRESUPUESTO",
+  clicks:174,
+  impressions:6791,
+  ctr:2.56,
+  avgCpc:460,
+  spent:80794,
+  googleAdsConversions:0,
+  crmConversions:4,
+  trackingStatus:"Falta una etiqueta de Google en tu sitio web"
 };
 
 /* ---------- RENDER ---------- */
@@ -741,15 +794,16 @@ document.getElementById('compgrid').innerHTML=COMP.map(c=>`
 const money=v=>'$'+Math.round(v).toLocaleString('es-CO');
 const number=v=>Math.round(v).toLocaleString('es-CO');
 const decimals=(v,d=2)=>Number(v).toLocaleString('es-CO',{minimumFractionDigits:d,maximumFractionDigits:d});
+
 const budgetPct=Math.min((PAID_MEDIA.spent/PAID_MEDIA.budget)*100,100);
 const remaining=Math.max(PAID_MEDIA.budget-PAID_MEDIA.spent,0);
 const frequency=PAID_MEDIA.impressions/PAID_MEDIA.reach;
 const cpm=(PAID_MEDIA.spent/PAID_MEDIA.impressions)*1000;
 const projected=Math.round(PAID_MEDIA.budget/PAID_MEDIA.costPerResult);
 const PERF_KPIS=[
-  {label:'Inversión',value:money(PAID_MEDIA.spent),note:'Meta Ads · periodo actual'},
-  {label:'Conversaciones',value:number(PAID_MEDIA.results),note:'Mensajes iniciados',hot:true},
-  {label:'Costo por resultado',value:money(PAID_MEDIA.costPerResult),note:'Por conversación iniciada',hot:true},
+  {label:'Inversión',value:money(PAID_MEDIA.spent),note:'Meta Ads · septiembre'},
+  {label:'Conversaciones',value:number(PAID_MEDIA.results),note:'Nuevos contactos',hot:true},
+  {label:'Costo por resultado',value:money(PAID_MEDIA.costPerResult),note:'Por nuevo contacto',hot:true},
   {label:'Personas alcanzadas',value:number(PAID_MEDIA.reach),note:'Alcance único estimado'}
 ];
 document.getElementById('perfKpis').innerHTML=PERF_KPIS.map(k=>`
@@ -768,9 +822,31 @@ document.getElementById('perfCpm').textContent=money(cpm);
 document.getElementById('projCurrent').textContent=number(PAID_MEDIA.results);
 document.getElementById('projFull').textContent='≈'+number(projected);
 document.getElementById('perfCampaign').textContent=PAID_MEDIA.campaign;
-document.getElementById('perfAdset').textContent=PAID_MEDIA.adset;
-document.getElementById('perfStart').textContent=PAID_MEDIA.start;
+document.getElementById('perfMessageContacts').textContent=number(PAID_MEDIA.messageContacts);
+document.getElementById('perfNewContacts').textContent=number(PAID_MEDIA.newContacts);
 setTimeout(()=>{const fill=document.getElementById('budgetFill');if(fill)fill.style.width=budgetPct+'%';},180);
+
+const googleCrmCpl=GOOGLE_MEDIA.crmConversions>0?GOOGLE_MEDIA.spent/GOOGLE_MEDIA.crmConversions:0;
+const GOOGLE_KPIS=[
+  {label:'Inversión',value:money(GOOGLE_MEDIA.spent),note:'Google Ads · septiembre'},
+  {label:'Conversiones CRM',value:number(GOOGLE_MEDIA.crmConversions),note:'Confirmadas en CRM',hot:true},
+  {label:'CPL real CRM',value:money(googleCrmCpl),note:'Inversión ÷ conversiones CRM',hot:true},
+  {label:'Clics',value:number(GOOGLE_MEDIA.clicks),note:'Campaña de búsqueda'}
+];
+document.getElementById('googlePerfKpis').innerHTML=GOOGLE_KPIS.map(k=>`
+  <div class="perf-kpi reveal ${k.hot?'hot':''}">
+    <div class="k-label">${k.label}</div><strong>${k.value}</strong><small>${k.note}</small>
+  </div>`).join('');
+document.getElementById('googleImpressions').textContent=number(GOOGLE_MEDIA.impressions);
+document.getElementById('googleClicks').textContent=number(GOOGLE_MEDIA.clicks);
+document.getElementById('googleCtr').textContent=decimals(GOOGLE_MEDIA.ctr,2)+'%';
+document.getElementById('googleAvgCpc').textContent=money(GOOGLE_MEDIA.avgCpc);
+document.getElementById('googleCampaign').textContent=GOOGLE_MEDIA.campaign;
+document.getElementById('googleSpent').textContent=money(GOOGLE_MEDIA.spent);
+document.getElementById('googlePlatformConversions').textContent=number(GOOGLE_MEDIA.googleAdsConversions);
+document.getElementById('googleCrmConversions').textContent=number(GOOGLE_MEDIA.crmConversions);
+document.getElementById('googleCrmCpl').textContent=money(googleCrmCpl);
+document.getElementById('googleTrackingStatus').textContent=GOOGLE_MEDIA.trackingStatus;
 
 /* ---------- MAP ---------- */
 function initMap(){
